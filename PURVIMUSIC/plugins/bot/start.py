@@ -31,7 +31,7 @@ from PURVIMUSIC.utils.database import (
 from PURVIMUSIC.utils.decorators.language import LanguageStart
 from PURVIMUSIC.utils.formatters import get_readable_time
 from PURVIMUSIC.utils.functions import MARKDOWN, WELCOMEHELP
-from PURVIMUSIC.utils.inline import alive_panel, music_start_panel, start_pannel
+from PURVIMUSIC.utils.inline import alive_panel, private_panel, start_pannel
 
 from .help import paginate_modules
 
@@ -221,7 +221,7 @@ async def start_comm(client, message: Message, _):
     else:
 
         try:
-            out = music_start_panel(_)
+            out = private_panel(_)
             vip = await message.reply_text(f"**𝗪**")
             await vip.edit_text(f"**𝗪𝗘**")
             await vip.edit_text(f"**𝗪𝗘𝗟**")
