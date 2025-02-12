@@ -85,7 +85,7 @@ async def start_pm(client, message: Message, _):
     else:
         out = private_panel(_)
         await message.reply_text("**𝗧𝗛𝗔𝗡𝗞𝗦 𝗙𝗢𝗥 𝗦𝗧𝗔𝗥𝗧𝗜𝗡𝗚....**")
-            if message.chat.photo:
+        if message.chat.photo:
 
                 userss_photo = await app.download_media(
                     message.chat.photo.big_file_id,
