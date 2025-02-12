@@ -128,7 +128,7 @@ async def testbot(client, message: Message, _):
             chat_photo = START_IMG_URL
 
         # Get the alive panel and uptime
-        out = alive_panel(_)
+        out = start_panel(_)
         uptime = int(time.time() - _boot_)
 
         # Send the response with the group photo or fallback to START_IMG_URL
