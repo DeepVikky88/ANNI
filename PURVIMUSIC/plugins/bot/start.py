@@ -92,13 +92,13 @@ async def start_pm(client, message: Message, _):
                     message.chat.photo.big_file_id,
                 )
             else:
-                userss_photo = "assets/nodp.png"
+                userss_photo = "PURVIMUSIC/assets/nodp.png"
             if userss_photo:
                 chat_photo = userss_photo
             chat_photo = userss_photo if userss_photo else START_IMG_URL
         
         except AttributeError:
-            chat_photo = "assets/nodp.png"
+            chat_photo = "PURVIMUSIC/assets/nodp.png"
         await vikky.delete()
         await message.reply_photo(
             photo=chat_photo,
