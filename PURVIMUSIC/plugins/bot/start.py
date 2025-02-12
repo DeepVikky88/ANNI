@@ -84,8 +84,23 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
+        await message.reply_text("**𝗧𝗛𝗔𝗡𝗞𝗦 𝗙𝗢𝗥 𝗦𝗧𝗔𝗥𝗧𝗜𝗡𝗚....**")
+            if message.chat.photo:
+
+                userss_photo = await app.download_media(
+                    message.chat.photo.big_file_id,
+                )
+            else:
+                userss_photo = "assets/nodp.png"
+            if userss_photo:
+                chat_photo = userss_photo
+            chat_photo = userss_photo if userss_photo else START_IMG_URL
+
+        except AttributeError:
+            chat_photo = "assets/nodp.png"
+        await m.delete()
         await message.reply_photo(
-            photo=config.START_IMG_URL,
+            photo=chat_photo,
             caption=_["start_2"].format(message.from_user.mention, app.mention),
             reply_markup=InlineKeyboardMarkup(out),
         )
