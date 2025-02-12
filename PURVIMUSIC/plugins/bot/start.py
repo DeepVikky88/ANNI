@@ -20,7 +20,7 @@ from PURVIMUSIC.utils.database import (
 from PURVIMUSIC.utils.decorators.language import LanguageStart
 from PURVIMUSIC.utils.formatters import get_readable_time
 from PURVIMUSIC.utils.inline import help_pannel, private_panel, start_panel
-from config import BANNED_USERS
+from config import BANNED_USERS, START_IMG_URL
 from strings import get_string
 
 
