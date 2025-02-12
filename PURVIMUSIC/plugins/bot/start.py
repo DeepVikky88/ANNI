@@ -135,13 +135,13 @@ async def testbot(client, message: Message, _):
         if chat_photo:
             await message.reply_photo(
                 photo=chat_photo,
-                caption=_["start_7"].format(client.mention, get_readable_time(uptime)),
+                caption=_["start_1"].format(client.mention, get_readable_time(uptime)),
                 reply_markup=InlineKeyboardMarkup(out),
             )
         else:
             await message.reply_photo(
                 photo=config.START_IMG_URL,
-                caption=_["start_7"].format(client.mention, get_readable_time(uptime)),
+                caption=_["start_1"].format(client.mention, get_readable_time(uptime)),
                 reply_markup=InlineKeyboardMarkup(out),
             )
 
